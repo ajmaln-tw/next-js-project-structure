@@ -13,9 +13,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TablePagination from "@mui/material/TablePagination";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPrices } from "src/pages/tables/actions";
-import { STATE_REDUCER_KEY } from "src/pages/tables/constants";
+
+
 import LoadingCustomOverlay from "src/@core/components/common/LoadingOverLay";
+import { fetchPrices } from "../actions";
+import { STATE_REDUCER_KEY } from "../constants";
 
 const columns = [
   { id: "id", label: "ID", minWidth: 100 },
