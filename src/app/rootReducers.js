@@ -1,7 +1,7 @@
 
 import _ from "lodash";
 
-import * as tableReducer from "../pages/tables/exports";
+import * as tableReducer from "../views/tables/exports";
 
 const reducers = {};
 
