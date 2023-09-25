@@ -1,33 +1,33 @@
 // ** React Imports
-import { useState } from 'react'
+import { useState } from "react";
 
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
-import Button from '@mui/material/Button'
-import Divider from '@mui/material/Divider'
-import Collapse from '@mui/material/Collapse'
-import CardMedia from '@mui/material/CardMedia'
-import Typography from '@mui/material/Typography'
-import IconButton from '@mui/material/IconButton'
-import CardContent from '@mui/material/CardContent'
-import CardActions from '@mui/material/CardActions'
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Collapse from "@mui/material/Collapse";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
 
 // ** Icons Imports
-import ChevronUp from 'mdi-material-ui/ChevronUp'
-import ChevronDown from 'mdi-material-ui/ChevronDown'
+import ChevronUp from "mdi-material-ui/ChevronUp";
+import ChevronDown from "mdi-material-ui/ChevronDown";
 
 const CardWithCollapse = () => {
   // ** State
-  const [collapse, setCollapse] = useState(false)
+  const [collapse, setCollapse] = useState(false);
 
   const handleClick = () => {
-    setCollapse(!collapse)
-  }
+    setCollapse(!collapse);
+  };
 
   return (
     <Card>
-      <CardMedia sx={{ height: '14.5625rem' }} image='/images/cards/paper-boat.png' />
+      <CardMedia sx={{ height: "14.5625rem" }} image='/images/cards/paper-boat.png' />
       <CardContent>
         <Typography variant='h6' sx={{ marginBottom: 2 }}>
           Popular Uses Of The Internet
@@ -39,15 +39,15 @@ const CardWithCollapse = () => {
       <CardActions className='card-action-dense'>
         <Box
           sx={{
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between'
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between"
           }}
         >
           <Button onClick={handleClick}>Details</Button>
           <IconButton size='small' onClick={handleClick}>
-            {collapse ? <ChevronUp sx={{ fontSize: '1.875rem' }} /> : <ChevronDown sx={{ fontSize: '1.875rem' }} />}
+            {collapse ? <ChevronUp sx={{ fontSize: "1.875rem" }} /> : <ChevronDown sx={{ fontSize: "1.875rem" }} />}
           </IconButton>
         </Box>
       </CardActions>
@@ -63,7 +63,7 @@ const CardWithCollapse = () => {
         </CardContent>
       </Collapse>
     </Card>
-  )
-}
+  );
+};
 
-export default CardWithCollapse
+export default CardWithCollapse;

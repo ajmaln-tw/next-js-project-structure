@@ -1,8 +1,8 @@
 const themeConfig = {
   // ** Layout Configs
-  templateName: 'Materio' /* App Name */,
-  mode: 'light' /* light | dark */,
-  contentWidth: 'boxed' /* full | boxed */,
+  templateName: "Nextjs-redux" /* App Name */,
+  mode: "light" /* light | dark */,
+  contentWidth: "boxed" /* full | boxed */,
   // ** Routing Configs
   routingLoader: true /* true | false */,
   // ** Navigation (Menu) Configs
@@ -11,6 +11,6 @@ const themeConfig = {
   // ** Other Configs
   responsiveFontSizes: true /* true | false */,
   disableRipple: false /* true | false */
-}
+};
 
-export default themeConfig
+export default themeConfig;

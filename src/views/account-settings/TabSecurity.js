@@ -1,75 +1,75 @@
 // ** React Imports
-import { useState } from 'react'
+import { useState } from "react";
 
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Avatar from '@mui/material/Avatar'
-import Button from '@mui/material/Button'
-import Divider from '@mui/material/Divider'
-import InputLabel from '@mui/material/InputLabel'
-import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
-import FormControl from '@mui/material/FormControl'
-import OutlinedInput from '@mui/material/OutlinedInput'
-import InputAdornment from '@mui/material/InputAdornment'
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import InputLabel from "@mui/material/InputLabel";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
+import FormControl from "@mui/material/FormControl";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
 
 // ** Icons Imports
-import EyeOutline from 'mdi-material-ui/EyeOutline'
-import KeyOutline from 'mdi-material-ui/KeyOutline'
-import EyeOffOutline from 'mdi-material-ui/EyeOffOutline'
-import LockOpenOutline from 'mdi-material-ui/LockOpenOutline'
+import EyeOutline from "mdi-material-ui/EyeOutline";
+import KeyOutline from "mdi-material-ui/KeyOutline";
+import EyeOffOutline from "mdi-material-ui/EyeOffOutline";
+import LockOpenOutline from "mdi-material-ui/LockOpenOutline";
 
 const TabSecurity = () => {
   // ** States
   const [values, setValues] = useState({
-    newPassword: '',
-    currentPassword: '',
+    newPassword: "",
+    currentPassword: "",
     showNewPassword: false,
-    confirmNewPassword: '',
+    confirmNewPassword: "",
     showCurrentPassword: false,
     showConfirmNewPassword: false
-  })
+  });
 
   // Handle Current Password
   const handleCurrentPasswordChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
   const handleClickShowCurrentPassword = () => {
-    setValues({ ...values, showCurrentPassword: !values.showCurrentPassword })
-  }
+    setValues({ ...values, showCurrentPassword: !values.showCurrentPassword });
+  };
 
   const handleMouseDownCurrentPassword = event => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   // Handle New Password
   const handleNewPasswordChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
   const handleClickShowNewPassword = () => {
-    setValues({ ...values, showNewPassword: !values.showNewPassword })
-  }
+    setValues({ ...values, showNewPassword: !values.showNewPassword });
+  };
 
   const handleMouseDownNewPassword = event => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   // Handle Confirm New Password
   const handleConfirmNewPasswordChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
   const handleClickShowConfirmNewPassword = () => {
-    setValues({ ...values, showConfirmNewPassword: !values.showConfirmNewPassword })
-  }
+    setValues({ ...values, showConfirmNewPassword: !values.showConfirmNewPassword });
+  };
 
   const handleMouseDownConfirmNewPassword = event => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   return (
     <form>
@@ -84,8 +84,8 @@ const TabSecurity = () => {
                     label='Current Password'
                     value={values.currentPassword}
                     id='account-settings-current-password'
-                    type={values.showCurrentPassword ? 'text' : 'password'}
-                    onChange={handleCurrentPasswordChange('currentPassword')}
+                    type={values.showCurrentPassword ? "text" : "password"}
+                    onChange={handleCurrentPasswordChange("currentPassword")}
                     endAdornment={
                       <InputAdornment position='end'>
                         <IconButton
@@ -109,8 +109,8 @@ const TabSecurity = () => {
                     label='New Password'
                     value={values.newPassword}
                     id='account-settings-new-password'
-                    onChange={handleNewPasswordChange('newPassword')}
-                    type={values.showNewPassword ? 'text' : 'password'}
+                    onChange={handleNewPasswordChange("newPassword")}
+                    type={values.showNewPassword ? "text" : "password"}
                     endAdornment={
                       <InputAdornment position='end'>
                         <IconButton
@@ -134,8 +134,8 @@ const TabSecurity = () => {
                     label='Confirm New Password'
                     value={values.confirmNewPassword}
                     id='account-settings-confirm-new-password'
-                    type={values.showConfirmNewPassword ? 'text' : 'password'}
-                    onChange={handleConfirmNewPasswordChange('confirmNewPassword')}
+                    type={values.showConfirmNewPassword ? "text" : "password"}
+                    onChange={handleConfirmNewPasswordChange("confirmNewPassword")}
                     endAdornment={
                       <InputAdornment position='end'>
                         <IconButton
@@ -158,7 +158,7 @@ const TabSecurity = () => {
             item
             sm={6}
             xs={12}
-            sx={{ display: 'flex', marginTop: [7.5, 2.5], alignItems: 'center', justifyContent: 'center' }}
+            sx={{ display: "flex", marginTop: [7.5, 2.5], alignItems: "center", justifyContent: "center" }}
           >
             <img width={183} alt='avatar' height={256} src='/images/pages/pose-m-1.png' />
           </Grid>
@@ -168,26 +168,26 @@ const TabSecurity = () => {
       <Divider sx={{ margin: 0 }} />
 
       <CardContent>
-        <Box sx={{ mt: 1.75, display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ mt: 1.75, display: "flex", alignItems: "center" }}>
           <KeyOutline sx={{ marginRight: 3 }} />
           <Typography variant='h6'>Two-factor authentication</Typography>
         </Box>
 
-        <Box sx={{ mt: 5.75, display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ mt: 5.75, display: "flex", justifyContent: "center" }}>
           <Box
             sx={{
               maxWidth: 368,
-              display: 'flex',
-              textAlign: 'center',
-              alignItems: 'center',
-              flexDirection: 'column'
+              display: "flex",
+              textAlign: "center",
+              alignItems: "center",
+              flexDirection: "column"
             }}
           >
             <Avatar
               variant='rounded'
-              sx={{ width: 48, height: 48, color: 'common.white', backgroundColor: 'primary.main' }}
+              sx={{ width: 48, height: 48, color: "common.white", backgroundColor: "primary.main" }}
             >
-              <LockOpenOutline sx={{ fontSize: '1.75rem' }} />
+              <LockOpenOutline sx={{ fontSize: "1.75rem" }} />
             </Avatar>
             <Typography sx={{ fontWeight: 600, marginTop: 3.5, marginBottom: 3.5 }}>
               Two factor authentication is not enabled yet.
@@ -207,14 +207,14 @@ const TabSecurity = () => {
             type='reset'
             variant='outlined'
             color='secondary'
-            onClick={() => setValues({ ...values, currentPassword: '', newPassword: '', confirmNewPassword: '' })}
+            onClick={() => setValues({ ...values, currentPassword: "", newPassword: "", confirmNewPassword: "" })}
           >
             Reset
           </Button>
         </Box>
       </CardContent>
     </form>
-  )
-}
+  );
+};
 
-export default TabSecurity
+export default TabSecurity;

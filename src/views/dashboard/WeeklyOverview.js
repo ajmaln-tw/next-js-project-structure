@@ -1,22 +1,22 @@
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
-import Button from '@mui/material/Button'
-import { useTheme } from '@mui/material/styles'
-import CardHeader from '@mui/material/CardHeader'
-import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
+import CardHeader from "@mui/material/CardHeader";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
 
 // ** Icons Imports
-import DotsVertical from 'mdi-material-ui/DotsVertical'
+import DotsVertical from "mdi-material-ui/DotsVertical";
 
 // ** Custom Components Imports
-import ReactApexcharts from 'src/@core/components/react-apexcharts'
+import ReactApexcharts from "src/@core/components/react-apexcharts";
 
 const WeeklyOverview = () => {
   // ** Hook
-  const theme = useTheme()
+  const theme = useTheme();
 
   const options = {
     chart: {
@@ -27,9 +27,9 @@ const WeeklyOverview = () => {
       bar: {
         borderRadius: 9,
         distributed: true,
-        columnWidth: '40%',
-        endingShape: 'rounded',
-        startingShape: 'rounded'
+        columnWidth: "40%",
+        endingShape: "rounded",
+        startingShape: "rounded"
       }
     },
     stroke: {
@@ -57,15 +57,15 @@ const WeeklyOverview = () => {
     ],
     states: {
       hover: {
-        filter: { type: 'none' }
+        filter: { type: "none" }
       },
       active: {
-        filter: { type: 'none' }
+        filter: { type: "none" }
       }
     },
     xaxis: {
-      categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-      tickPlacement: 'on',
+      categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      tickPlacement: "on",
       labels: { show: false },
       axisTicks: { show: false },
       axisBorder: { show: false }
@@ -78,24 +78,24 @@ const WeeklyOverview = () => {
         formatter: value => `${value > 999 ? `${(value / 1000).toFixed(0)}` : value}k`
       }
     }
-  }
+  };
 
   return (
     <Card>
       <CardHeader
         title='Weekly Overview'
         titleTypographyProps={{
-          sx: { lineHeight: '2rem !important', letterSpacing: '0.15px !important' }
+          sx: { lineHeight: "2rem !important", letterSpacing: "0.15px !important" }
         }}
         action={
-          <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
+          <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: "text.secondary" }}>
             <DotsVertical />
           </IconButton>
         }
       />
-      <CardContent sx={{ '& .apexcharts-xcrosshairs.apexcharts-active': { opacity: 0 } }}>
+      <CardContent sx={{ "& .apexcharts-xcrosshairs.apexcharts-active": { opacity: 0 } }}>
         <ReactApexcharts type='bar' height={205} options={options} series={[{ data: [37, 57, 45, 75, 57, 40, 65] }]} />
-        <Box sx={{ mb: 7, display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ mb: 7, display: "flex", alignItems: "center" }}>
           <Typography variant='h5' sx={{ mr: 4 }}>
             45%
           </Typography>
@@ -106,7 +106,7 @@ const WeeklyOverview = () => {
         </Button>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default WeeklyOverview
+export default WeeklyOverview;

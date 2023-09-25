@@ -1,81 +1,81 @@
 // ** React Imports
-import { forwardRef, useState } from 'react'
+import { forwardRef, useState } from "react";
 
 // ** MUI Imports
-import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
-import Button from '@mui/material/Button'
-import Divider from '@mui/material/Divider'
-import MenuItem from '@mui/material/MenuItem'
-import TextField from '@mui/material/TextField'
-import CardHeader from '@mui/material/CardHeader'
-import InputLabel from '@mui/material/InputLabel'
-import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
-import CardActions from '@mui/material/CardActions'
-import FormControl from '@mui/material/FormControl'
-import OutlinedInput from '@mui/material/OutlinedInput'
-import InputAdornment from '@mui/material/InputAdornment'
-import Select from '@mui/material/Select'
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import MenuItem from "@mui/material/MenuItem";
+import TextField from "@mui/material/TextField";
+import CardHeader from "@mui/material/CardHeader";
+import InputLabel from "@mui/material/InputLabel";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import FormControl from "@mui/material/FormControl";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
+import Select from "@mui/material/Select";
 
 // ** Third Party Imports
-import DatePicker from 'react-datepicker'
+import DatePicker from "react-datepicker";
 
 // ** Icons Imports
-import EyeOutline from 'mdi-material-ui/EyeOutline'
-import EyeOffOutline from 'mdi-material-ui/EyeOffOutline'
+import EyeOutline from "mdi-material-ui/EyeOutline";
+import EyeOffOutline from "mdi-material-ui/EyeOffOutline";
 
 const CustomInput = forwardRef((props, ref) => {
-  return <TextField fullWidth {...props} inputRef={ref} label='Birth Date' autoComplete='off' />
-})
+  return <TextField fullWidth {...props} inputRef={ref} label='Birth Date' autoComplete='off' />;
+});
 
 const FormLayoutsSeparator = () => {
   // ** States
-  const [language, setLanguage] = useState([])
-  const [date, setDate] = useState(null)
+  const [language, setLanguage] = useState([]);
+  const [date, setDate] = useState(null);
 
   const [values, setValues] = useState({
-    password: '',
-    password2: '',
+    password: "",
+    password2: "",
     showPassword: false,
     showPassword2: false
-  })
+  });
 
   // Handle Password
   const handlePasswordChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
   const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword })
-  }
+    setValues({ ...values, showPassword: !values.showPassword });
+  };
 
   const handleMouseDownPassword = event => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   // Handle Confirm Password
   const handleConfirmChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
   const handleClickShowConfirmPassword = () => {
-    setValues({ ...values, showPassword2: !values.showPassword2 })
-  }
+    setValues({ ...values, showPassword2: !values.showPassword2 });
+  };
 
   const handleMouseDownConfirmPassword = event => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   // Handle Select
   const handleSelectChange = event => {
-    setLanguage(event.target.value)
-  }
+    setLanguage(event.target.value);
+  };
 
   return (
     <Card>
-      <CardHeader title='Multi Column with Form Separator' titleTypographyProps={{ variant: 'h6' }} />
+      <CardHeader title='Multi Column with Form Separator' titleTypographyProps={{ variant: "h6" }} />
       <Divider sx={{ margin: 0 }} />
       <form onSubmit={e => e.preventDefault()}>
         <CardContent>
@@ -98,8 +98,8 @@ const FormLayoutsSeparator = () => {
                   label='Password'
                   value={values.password}
                   id='form-layouts-separator-password'
-                  onChange={handlePasswordChange('password')}
-                  type={values.showPassword ? 'text' : 'password'}
+                  onChange={handlePasswordChange("password")}
+                  type={values.showPassword ? "text" : "password"}
                   endAdornment={
                     <InputAdornment position='end'>
                       <IconButton
@@ -122,8 +122,8 @@ const FormLayoutsSeparator = () => {
                   value={values.password2}
                   label='Confirm Password'
                   id='form-layouts-separator-password-2'
-                  onChange={handleConfirmChange('password2')}
-                  type={values.showPassword2 ? 'text' : 'password'}
+                  onChange={handleConfirmChange("password2")}
+                  type={values.showPassword2 ? "text" : "password"}
                   endAdornment={
                     <InputAdornment position='end'>
                       <IconButton
@@ -217,7 +217,7 @@ const FormLayoutsSeparator = () => {
         </CardActions>
       </form>
     </Card>
-  )
-}
+  );
+};
 
-export default FormLayoutsSeparator
+export default FormLayoutsSeparator;

@@ -1,62 +1,62 @@
 // ** React Imports
-import { useState } from 'react'
+import { useState } from "react";
 
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
-import Link from '@mui/material/Link'
-import Button from '@mui/material/Button'
-import TextField from '@mui/material/TextField'
-import CardHeader from '@mui/material/CardHeader'
-import InputLabel from '@mui/material/InputLabel'
-import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
-import FormControl from '@mui/material/FormControl'
-import OutlinedInput from '@mui/material/OutlinedInput'
-import InputAdornment from '@mui/material/InputAdornment'
-import FormHelperText from '@mui/material/FormHelperText'
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import CardHeader from "@mui/material/CardHeader";
+import InputLabel from "@mui/material/InputLabel";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
+import FormControl from "@mui/material/FormControl";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormHelperText from "@mui/material/FormHelperText";
 
 // ** Icons Imports
-import EyeOutline from 'mdi-material-ui/EyeOutline'
-import EyeOffOutline from 'mdi-material-ui/EyeOffOutline'
+import EyeOutline from "mdi-material-ui/EyeOutline";
+import EyeOffOutline from "mdi-material-ui/EyeOffOutline";
 
 const FormLayoutsBasic = () => {
   // ** States
   const [values, setValues] = useState({
-    password: '',
+    password: "",
     showPassword: false
-  })
+  });
 
   const [confirmPassValues, setConfirmPassValues] = useState({
-    password: '',
+    password: "",
     showPassword: false
-  })
+  });
 
   const handleChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
   const handleConfirmPassChange = prop => event => {
-    setConfirmPassValues({ ...confirmPassValues, [prop]: event.target.value })
-  }
+    setConfirmPassValues({ ...confirmPassValues, [prop]: event.target.value });
+  };
 
   const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword })
-  }
+    setValues({ ...values, showPassword: !values.showPassword });
+  };
 
   const handleClickConfirmPassShow = () => {
-    setConfirmPassValues({ ...confirmPassValues, showPassword: !confirmPassValues.showPassword })
-  }
+    setConfirmPassValues({ ...confirmPassValues, showPassword: !confirmPassValues.showPassword });
+  };
 
   const handleMouseDownPassword = event => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   return (
     <Card>
-      <CardHeader title='Basic' titleTypographyProps={{ variant: 'h6' }} />
+      <CardHeader title='Basic' titleTypographyProps={{ variant: "h6" }} />
       <CardContent>
         <form onSubmit={e => e.preventDefault()}>
           <Grid container spacing={5}>
@@ -79,8 +79,8 @@ const FormLayoutsBasic = () => {
                   label='Password'
                   value={values.password}
                   id='form-layouts-basic-password'
-                  onChange={handleChange('password')}
-                  type={values.showPassword ? 'text' : 'password'}
+                  onChange={handleChange("password")}
+                  type={values.showPassword ? "text" : "password"}
                   aria-describedby='form-layouts-basic-password-helper'
                   endAdornment={
                     <InputAdornment position='end'>
@@ -107,9 +107,9 @@ const FormLayoutsBasic = () => {
                   label='Confirm Password'
                   value={confirmPassValues.password}
                   id='form-layouts-confirm-password'
-                  onChange={handleConfirmPassChange('password')}
+                  onChange={handleConfirmPassChange("password")}
                   aria-describedby='form-layouts-confirm-password-helper'
-                  type={confirmPassValues.showPassword ? 'text' : 'password'}
+                  type={confirmPassValues.showPassword ? "text" : "password"}
                   endAdornment={
                     <InputAdornment position='end'>
                       <IconButton
@@ -132,16 +132,16 @@ const FormLayoutsBasic = () => {
               <Box
                 sx={{
                   gap: 5,
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  alignItems: 'center',
-                  justifyContent: 'space-between'
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "space-between"
                 }}
               >
                 <Button type='submit' variant='contained' size='large'>
                   Get Started!
                 </Button>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Typography sx={{ mr: 2 }}>Already have an account?</Typography>
                   <Link href='/' onClick={e => e.preventDefault()}>
                     Log in
@@ -153,7 +153,7 @@ const FormLayoutsBasic = () => {
         </form>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default FormLayoutsBasic
+export default FormLayoutsBasic;
