@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { createAction } from "@reduxjs/toolkit";
-import { deleteRequest, getRequest, patchRequest, postRequest, putRequest } from "../app/axios";
+import { deleteRequest, getRequest, patchRequest, postRequest, putRequest } from "../redux/axios";
 import _ from "lodash";
 import { call, delay, put } from "redux-saga/effects";
 import { errorNotify, warningNotify } from "./notificationUtils";

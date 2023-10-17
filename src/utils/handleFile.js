@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { createAction } from "@reduxjs/toolkit";
-import { getRequest, postRequest } from "../app/axios";
+import { getRequest, postRequest } from "../redux/axios";
 import { call, put } from "redux-saga/effects";
 import { errorNotify, loaderNotify, successNotify } from "./notificationUtils";
 import { HTTP_CONSTANTS, REQUEST_METHOD } from "../common/constants";

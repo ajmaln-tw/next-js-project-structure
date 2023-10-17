@@ -1,24 +1,24 @@
 // ** MUI Imports
-import Card from '@mui/material/Card'
-import { styled } from '@mui/material/styles'
-import CardHeader from '@mui/material/CardHeader'
-import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Card from "@mui/material/Card";
+import { styled } from "@mui/material/styles";
+import CardHeader from "@mui/material/CardHeader";
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
+import Grid from "@mui/material/Grid";
 
 const DemoGrid = styled(Grid)(({ theme }) => ({
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down("sm")]: {
     paddingTop: `${theme.spacing(1)} !important`
   }
-}))
+}));
 
 const TypographyTexts = () => {
   return (
     <Card>
-      <CardHeader title='Texts' titleTypographyProps={{ variant: 'h6' }} />
+      <CardHeader title='Texts' titleTypographyProps={{ variant: "h6" }} />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} sm={2} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} sm={2} sx={{ display: "flex", alignItems: "center" }}>
             <Typography>subtitle1</Typography>
           </Grid>
           <DemoGrid item xs={12} sm={10}>
@@ -28,7 +28,7 @@ const TypographyTexts = () => {
             <Typography variant='body2'>font-size: 16px / line-height: 28px / font-weight: 400</Typography>
           </DemoGrid>
 
-          <Grid item xs={12} sm={2} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} sm={2} sx={{ display: "flex", alignItems: "center" }}>
             <Typography>subtitle2</Typography>
           </Grid>
           <DemoGrid item xs={12} sm={10}>
@@ -38,7 +38,7 @@ const TypographyTexts = () => {
             <Typography variant='body2'>font-size: 14px / line-height: 21px / font-weight: 500</Typography>
           </DemoGrid>
 
-          <Grid item xs={12} sm={2} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} sm={2} sx={{ display: "flex", alignItems: "center" }}>
             <Typography>body1</Typography>
           </Grid>
           <DemoGrid item xs={12} sm={10}>
@@ -48,7 +48,7 @@ const TypographyTexts = () => {
             <Typography variant='body2'>font-size: 16px / line-height: 24px / font-weight: 400</Typography>
           </DemoGrid>
 
-          <Grid item xs={12} sm={2} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} sm={2} sx={{ display: "flex", alignItems: "center" }}>
             <Typography>body2</Typography>
           </Grid>
           <DemoGrid item xs={12} sm={10}>
@@ -58,7 +58,7 @@ const TypographyTexts = () => {
             <Typography variant='body2'>font-size: 14px / line-height: 21px / font-weight: 400</Typography>
           </DemoGrid>
 
-          <Grid item xs={12} sm={2} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} sm={2} sx={{ display: "flex", alignItems: "center" }}>
             <Typography>button</Typography>
           </Grid>
           <DemoGrid item xs={12} sm={10}>
@@ -68,7 +68,7 @@ const TypographyTexts = () => {
             </Typography>
           </DemoGrid>
 
-          <Grid item xs={12} sm={2} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} sm={2} sx={{ display: "flex", alignItems: "center" }}>
             <Typography>caption</Typography>
           </Grid>
           <DemoGrid item xs={12} sm={10}>
@@ -78,7 +78,7 @@ const TypographyTexts = () => {
             </Typography>
           </DemoGrid>
 
-          <Grid item xs={12} sm={2} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} sm={2} sx={{ display: "flex", alignItems: "center" }}>
             <Typography>overline</Typography>
           </Grid>
           <DemoGrid item xs={12} sm={10}>
@@ -90,7 +90,7 @@ const TypographyTexts = () => {
         </Grid>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default TypographyTexts
+export default TypographyTexts;

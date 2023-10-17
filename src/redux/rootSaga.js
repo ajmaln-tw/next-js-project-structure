@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { all, fork } from "redux-saga/effects";
 
 import * as tableSaga from "../views/tables/exports";

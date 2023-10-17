@@ -1,33 +1,33 @@
 // ** MUI Theme Provider
-import { deepmerge } from '@mui/utils'
+import { deepmerge } from "@mui/utils";
 
 // ** Theme Override Imports
-import palette from './palette'
-import spacing from './spacing'
-import shadows from './shadows'
-import breakpoints from './breakpoints'
+import palette from "./palette";
+import spacing from "./spacing";
+import shadows from "./shadows";
+import breakpoints from "./breakpoints";
 
 const themeOptions = settings => {
   // ** Vars
-  const { mode, themeColor } = settings
+  const { mode, themeColor } = settings;
 
   const themeConfig = {
     palette: palette(mode, themeColor),
     typography: {
       fontFamily: [
-        'Inter',
-        'sans-serif',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"'
-      ].join(',')
+        "Inter",
+        "sans-serif",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "\"Segoe UI\"",
+        "Roboto",
+        "\"Helvetica Neue\"",
+        "Arial",
+        "sans-serif",
+        "\"Apple Color Emoji\"",
+        "\"Segoe UI Emoji\"",
+        "\"Segoe UI Symbol\""
+      ].join(",")
     },
     shadows: shadows(mode),
     ...spacing,
@@ -40,7 +40,7 @@ const themeOptions = settings => {
         minHeight: 64
       }
     }
-  }
+  };
 
   return deepmerge(themeConfig, {
     palette: {
@@ -48,7 +48,7 @@ const themeOptions = settings => {
         ...themeConfig.palette[themeColor]
       }
     }
-  })
-}
+  });
+};
 
-export default themeOptions
+export default themeOptions;
