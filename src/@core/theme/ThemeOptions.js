@@ -2,7 +2,7 @@
 import { deepmerge } from "@mui/utils";
 
 // ** Theme Override Imports
-import palette from "./palette";
+import palette from "./palette/index";
 import spacing from "./spacing";
 import shadows from "./shadows";
 import breakpoints from "./breakpoints";
